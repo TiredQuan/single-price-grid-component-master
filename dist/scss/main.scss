@@ -5,3 +5,42 @@
 
 @import 'base/reset';
 @import 'base/typography';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 72px 32px 0 32px;
+    box-shadow: 0px 5px 22px -4px rgba(30,30,60,0.25);
+}
+.card {
+    // 311 268
+    width: 311px;
+    height: 268px;
+    padding: 30px 24px 0 24px;
+        &__header {
+            background: white;
+            border-radius: 5px 5px 0 0;
+        
+                &--join {
+                    color: $cyan;
+                }
+                &--promise{
+                    color: $bright-yellow;
+                }
+                
+         }   
+
+         &__main{
+             background-color: rgba($cyan, $alpha: 1);
+
+         }
+         &__aside {
+            background-color: rgba($cyan, $alpha: 0.7);
+            border-radius: 0 0 5px 5px;
+            a{
+                display: block;
+                margin-bottom: 5px;
+            }
+         }
+}
