@@ -7,40 +7,93 @@
 @import 'base/typography';
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 72px 32px 0 32px;
+    width: fit-content;
+    height: fit-content;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    margin: 72px auto 0 auto;
     box-shadow: 0px 5px 22px -4px rgba(30,30,60,0.25);
+
+    @media screen and (min-width: 992px){
+        margin: 163px auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "main aside";
+    }
 }
 .card {
     // 311 268
     width: 311px;
     height: 268px;
     padding: 30px 24px 0 24px;
-        &__header {
-            background: white;
-            border-radius: 5px 5px 0 0;
+    @media screen and (min-width: 992px){
+        padding: 44px 38px 0 38px;
         
-                &--join {
-                    color: $cyan;
-                }
-                &--promise{
+    }
+    &__header {
+        background: white;
+        border-radius: 5px 5px 0 0;
+        @media screen and (min-width: 992px){
+            grid-area: header;
+            height: 216px;
+            width: 634px;
+        }
+        
+        &--join {
+            color: $cyan;
+        }
+        &--promise{
                     color: $bright-yellow;
                 }
                 
-         }   
-
-         &__main{
-             background-color: rgba($cyan, $alpha: 1);
-
-         }
-         &__aside {
+            }   
+            
+        &__main{
+            background-color: rgba($cyan, $alpha: 1);
+            height: 228px;
+            @media screen and (min-width: 992px){
+                grid-area: main;
+                width: 317px;
+                height: 259px;
+                border-radius: 0 0 0 5px;
+            }
+        }
+        &__aside {
+            height: 228px;
             background-color: rgba($cyan, $alpha: 0.7);
             border-radius: 0 0 5px 5px;
+            @media screen and (min-width: 992px){
+                grid-area: aside;
+                width: 317px;
+                height: 259px;
+                border-radius: 0 0 5px 0;
+            }
             a{
                 display: block;
                 margin-bottom: 5px;
+                @media screen and (min-width: 992px){
+                    margin-bottom: 6px;
+        
+                }
             }
-         }
+         }   
+}
+#sign-up {
+    width: 263px;
+    height: 48px;
+    background-color: $bright-yellow;
+    color: rgba(white, $alpha: 0.9);
+    font-size: $font-size * 0.9;
+    border: none;
+    border-radius: 5px;
+    font-weight: map-get($font-weights, bold );
+    box-shadow: 0px 5px 22px -4px rgba(30,30,60,0.25);
+    @media screen and (min-width: 992px){
+        width: 237px;
+        margin-top: 17px;
+        
+    }
 }

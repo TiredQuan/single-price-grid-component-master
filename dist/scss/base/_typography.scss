@@ -1,9 +1,28 @@
 // font-family: 'Karla', sans-serif;
 p {
     color:$grayish-blue;
+    margin: auto auto 0 auto;
+}
+.card__header--statement {
+    font-size: $font-size* 0.9;
+    line-height: 1.8;
+    @media screen and (min-width: 992px){
+        font-size: $font-size;
+        line-height: 1.7;
+        
+    }
+
+        
 }
 h3 {
     margin-top: 0;
+    
+}
+.not-header {
+    @media screen and (min-width: 992px){
+        font-size: $font-size;
+    
+    }
 }
 span {
     font-size: $font-size*2;
@@ -11,6 +30,12 @@ span {
     color: $light-gray;
 }
 section {
+    p {
+        color: rgba($light-gray, $alpha: 0.8);
+        span{
+            vertical-align:middle;
+        }
+    }
     * {
         color: white;
     }
@@ -20,6 +45,18 @@ aside {
         color: white;
     }
 }
+#full-access{
+    color: rgba(white, $alpha: 0.9);
+    font-weight: map-get($font-weights, regular );
+}
 a{
-    font-size: $font-size * 0.9;
+    color: rgba($light-gray, $alpha: 0.9);
+    font-size: $font-size * 0.8;
+    font-weight: map-get($font-weights, regular );
+    text-decoration: none;
+    
+}
+h4{ 
+    @media screen and (min-width: 992px){
+    margin: 10px 0;}
 }

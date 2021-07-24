@@ -12,16 +12,43 @@ body {
 
 p {
   color: #98a6bd;
+  margin: auto auto 0 auto;
+}
+
+.card__header--statement {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 992px) {
+  .card__header--statement {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
 }
 
 h3 {
   margin-top: 0;
 }
 
+@media screen and (min-width: 992px) {
+  .not-header {
+    font-size: 1rem;
+  }
+}
+
 span {
   font-size: 2rem;
   font-weight: 700;
   color: #e5eff5;
+}
+
+section p {
+  color: rgba(229, 239, 245, 0.8);
+}
+
+section p span {
+  vertical-align: middle;
 }
 
 section * {
@@ -32,24 +59,45 @@ aside * {
   color: white;
 }
 
+#full-access {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
 a {
-  font-size: 0.9rem;
+  color: rgba(229, 239, 245, 0.9);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  h4 {
+    margin: 10px 0;
+  }
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 72px 32px 0 32px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 72px auto 0 auto;
   -webkit-box-shadow: 0px 5px 22px -4px rgba(30, 30, 60, 0.25);
           box-shadow: 0px 5px 22px -4px rgba(30, 30, 60, 0.25);
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 163px auto 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header" "main aside";
+  }
 }
 
 .card {
@@ -58,9 +106,23 @@ a {
   padding: 30px 24px 0 24px;
 }
 
+@media screen and (min-width: 992px) {
+  .card {
+    padding: 44px 38px 0 38px;
+  }
+}
+
 .card__header {
   background: white;
   border-radius: 5px 5px 0 0;
+}
+
+@media screen and (min-width: 992px) {
+  .card__header {
+    grid-area: header;
+    height: 216px;
+    width: 634px;
+  }
 }
 
 .card__header--join {
@@ -73,15 +135,61 @@ a {
 
 .card__main {
   background-color: #2ab2af;
+  height: 228px;
+}
+
+@media screen and (min-width: 992px) {
+  .card__main {
+    grid-area: main;
+    width: 317px;
+    height: 259px;
+    border-radius: 0 0 0 5px;
+  }
 }
 
 .card__aside {
+  height: 228px;
   background-color: rgba(42, 178, 175, 0.7);
   border-radius: 0 0 5px 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .card__aside {
+    grid-area: aside;
+    width: 317px;
+    height: 259px;
+    border-radius: 0 0 5px 0;
+  }
 }
 
 .card__aside a {
   display: block;
   margin-bottom: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .card__aside a {
+    margin-bottom: 6px;
+  }
+}
+
+#sign-up {
+  width: 263px;
+  height: 48px;
+  background-color: #c0df34;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 5px 22px -4px rgba(30, 30, 60, 0.25);
+          box-shadow: 0px 5px 22px -4px rgba(30, 30, 60, 0.25);
+}
+
+@media screen and (min-width: 992px) {
+  #sign-up {
+    width: 237px;
+    margin-top: 17px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
