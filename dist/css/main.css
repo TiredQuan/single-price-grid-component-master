@@ -192,4 +192,8 @@ a {
     margin-top: 17px;
   }
 }
+
+#sign-up:hover {
+  background-color: rgba(192, 223, 52, 0.7);
+}
 /*# sourceMappingURL=main.css.map */
